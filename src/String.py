@@ -29,8 +29,7 @@ Created on Sep 21, 2013
 # So donuts(5) returns 'Number of donuts: 5'
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
-  # +++your code here+++
-  if count in range(10):
+  if count < 10:
     return 'Number of donuts: '+str(count)
   else:
     return 'Number of donuts: many'
@@ -61,7 +60,10 @@ def both_ends(s):
 # Hint: s.replace(stra, strb) returns a version of string s
 # where all instances of stra have been replaced by strb.
 def fix_start(s):
-  return s[0]+s[1:].replace(s[0],'*')
+  front = s[0]
+  back = s[1:]
+  fixed_back = back.replace(front, '*')
+  return front + fixed_back
 
 
 # D. MixUp
